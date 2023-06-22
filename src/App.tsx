@@ -1,7 +1,15 @@
 import React from 'react'
 import './App.css'
+import Login from './pages/Login'
+import Register from './pages/Register'
+
 const App = () => {
-  return <div>App</div>
+  return (
+    <>
+      <Login />
+      <Register />
+    </>
+  )
 }
 
 export default App
