@@ -5,10 +5,12 @@ import Register from './pages/Register'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Dashboard from './pages/Dashboard'
 import Addarticle from './pages/Addarticle'
+import Navbar from './pages/Navbar'
 
 const App = () => {
   return (
     <>
+      <Navbar />
       <Router>
         <Routes>
           <Route path="/login" element={<Login />} />
