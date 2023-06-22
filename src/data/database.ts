@@ -8,6 +8,7 @@ export const data = [
     image: WorkIm,
     description: 'this is just a test',
     prix: '200',
+    quantité: '10',
   },
   {
     id: 2,
@@ -15,6 +16,7 @@ export const data = [
     image: RealEst,
     description: 'this is just a test',
     prix: '300',
+    quantité: '60',
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const data = [
     image: WorkIm,
     description: 'this is just a test',
     prix: '400',
+    quantité: '40',
   },
   {
     id: 4,
@@ -29,6 +32,7 @@ export const data = [
     image: RealEst,
     description: 'this is just a test',
     prix: '5000',
+    quantité: '55',
   },
   {
     id: 5,
@@ -36,6 +40,7 @@ export const data = [
     image: RealEst,
     description: 'this is just a test',
     prix: '100',
+    quantité: '70',
   },
   {
     id: 6,
@@ -43,6 +48,7 @@ export const data = [
     image: RealEst,
     description: 'this is just a test',
     prix: '900',
+    quantité: '11',
   },
   {
     id: 7,
@@ -50,5 +56,6 @@ export const data = [
     image: RealEst,
     description: 'this is just a test',
     prix: '6000',
+    quantité: '22',
   },
 ]

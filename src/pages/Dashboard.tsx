@@ -5,15 +5,18 @@ import { data } from '../data/database'
 const Dashboard = () => {
   return (
     <div className="container mx-auto mt-20 px-60">
+      <h1 className="text-3xl font-semibold text-center text-purple-700 underline">
+        Gestion des articles
+      </h1>
       <div className="flex flex-col">
         <div className="overflow-x-auto">
           <div className="py-3 pl-2">
-            <div className="relative w-40 flex">
+            <div className="relative w-60 flex">
               <Link
                 to="/addarticle"
                 className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600"
               >
-                Add New Article
+                Ajouter Nouvel article
               </Link>
             </div>
           </div>
@@ -51,13 +54,13 @@ const Dashboard = () => {
                       scope="col"
                       className="px-6 py-3 text-xs font-bold text-right text-gray-500 uppercase "
                     >
-                      Edit
+                      Modifier
                     </th>
                     <th
                       scope="col"
                       className="px-6 py-3 text-xs font-bold text-right text-gray-500 uppercase "
                     >
-                      Delete
+                      Supprimer
                     </th>
                   </tr>
                 </thead>
@@ -82,12 +85,12 @@ const Dashboard = () => {
                           className="text-green-500 hover:text-green-700"
                           href="#"
                         >
-                          Edit
+                          Modifier
                         </a>
                       </td>
                       <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
                         <a className="text-red-500 hover:text-red-700" href="#">
-                          Delete
+                          Supprimer
                         </a>
                       </td>
                     </tr>
