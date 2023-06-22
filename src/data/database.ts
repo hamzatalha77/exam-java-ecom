@@ -1,61 +1,68 @@
 import WorkIm from '../assets/projects/workImg.jpeg'
 import RealEst from '../assets/projects/realestate.jpg'
 
-export const data = [
+export const articles = [
   {
-    id: 1,
+    _id: 1,
     name: 'Product 1',
     image: WorkIm,
-    description: 'this is just a test',
-    prix: '200',
-    quantité: '10',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorem impedit modi quidem molestias, reiciendis itaque ea esse debitis aperiam nisi? Magnam minus magni deleniti eius repellendus ea labore eligendi.',
+    prix: 200,
+    countInStock: 10,
   },
   {
-    id: 2,
+    _id: 2,
     name: 'Product 2',
     image: RealEst,
-    description: 'this is just a test',
-    prix: '300',
-    quantité: '60',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorem impedit modi quidem molestias, reiciendis itaque ea esse debitis aperiam nisi? Magnam minus magni deleniti eius repellendus ea labore eligendi.',
+    prix: 300,
+    countInStock: 0,
   },
   {
-    id: 3,
+    _id: 3,
     name: 'Product 3',
     image: WorkIm,
-    description: 'this is just a test',
-    prix: '400',
-    quantité: '40',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorem impedit modi quidem molestias, reiciendis itaque ea esse debitis aperiam nisi? Magnam minus magni deleniti eius repellendus ea labore eligendi.',
+    prix: 400,
+    countInStock: 7,
   },
   {
-    id: 4,
+    _id: 4,
     name: 'Product 4',
     image: RealEst,
-    description: 'this is just a test',
-    prix: '5000',
-    quantité: '55',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorem impedit modi quidem molestias, reiciendis itaque ea esse debitis aperiam nisi? Magnam minus magni deleniti eius repellendus ea labore eligendi.',
+    prix: 5000,
+    countInStock: 3,
   },
   {
-    id: 5,
+    _id: 5,
     name: 'Product 5',
     image: RealEst,
-    description: 'this is just a test',
-    prix: '100',
-    quantité: '70',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorem impedit modi quidem molestias, reiciendis itaque ea esse debitis aperiam nisi? Magnam minus magni deleniti eius repellendus ea labore eligendi.',
+    prix: 100,
+    countInStock: 6,
   },
   {
-    id: 6,
+    _id: 6,
     name: 'Product 6',
     image: RealEst,
-    description: 'this is just a test',
-    prix: '900',
-    quantité: '11',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorem impedit modi quidem molestias, reiciendis itaque ea esse debitis aperiam nisi? Magnam minus magni deleniti eius repellendus ea labore eligendi.',
+    prix: 900,
+    countInStock: 5,
   },
   {
-    id: 7,
+    _id: 7,
     name: 'Product 12',
     image: RealEst,
-    description: 'this is just a test',
-    prix: '6000',
-    quantité: '22',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorem impedit modi quidem molestias, reiciendis itaque ea esse debitis aperiam nisi? Magnam minus magni deleniti eius repellendus ea labore eligendi.',
+    prix: 6000,
+    countInStock: 9,
   },
 ]

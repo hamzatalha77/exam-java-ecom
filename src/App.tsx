@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard'
 import Addarticle from './pages/Addarticle'
 import Navbar from './pages/Navbar'
 import Home from './pages/Home'
+import ArticleScreen from './pages/ArticleScreen'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/article/:id" element={<ArticleScreen />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />

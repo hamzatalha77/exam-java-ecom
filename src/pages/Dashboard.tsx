@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { data } from '../data/database'
+import { articles } from '../data/database'
 const Dashboard = () => {
   return (
     <div className="container mx-auto mt-20 px-60">
@@ -65,20 +65,20 @@ const Dashboard = () => {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200">
-                  {data.map((item) => (
-                    <tr key={item.id}>
+                  {articles.map((article) => (
+                    <tr key={article._id}>
                       <td className="px-6 py-4 text-sm font-medium text-gray-800 whitespace-nowrap">
-                        {item.id}
+                        {article._id}
                       </td>
                       <td className="rounded-full h-12 w-12  object-cover ">
-                        <img src={item.image} alt={item.name} />
+                        <img src={article.image} alt={article.name} />
                       </td>
 
                       <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                        {item.name}
+                        {article.name}
                       </td>
                       <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                        {item.prix}
+                        {article.prix}
                       </td>
                       <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
                         <a
