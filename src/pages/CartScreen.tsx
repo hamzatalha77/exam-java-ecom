@@ -11,63 +11,50 @@ const CartScreen = () => {
 
   const cart = useSelector((state: RootState) => state.cart)
   const { cartItems } = cart
+
   return (
     <div>
-      <body>
-        <div className="h-screen bg-gray-100 pt-20">
-          <h1 className="mb-10 text-center text-2xl font-bold">Cart Items</h1>
-          {cartItems}
-          <div className="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
-            <div className="rounded-lg md:w-2/3">
-              <div className="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
-                <img
-                  src="https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1131&q=80"
-                  alt="product"
-                  className="w-full rounded-lg sm:w-40"
-                />
-                <div className="sm:ml-4 sm:flex sm:w-full sm:justify-between">
-                  <div className="mt-5 sm:mt-0">
-                    <h2 className="text-lg font-bold text-gray-900">
-                      Nike Air Max 2019
-                    </h2>
-                    <p className="mt-1 text-xs text-gray-700">36EU - 4US</p>
-                  </div>
-                  <div className="mt-4 flex justify-between im sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
-                    <div className="flex items-center border-gray-100">
-                      <span className="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50">
-                        -
-                      </span>
-                      <input
-                        className="h-8 w-8 border bg-white text-center text-xs outline-none"
-                        type="number"
-                        value="2"
-                        min="1"
-                      />
-                      <span className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50">
-                        +
-                      </span>
+      <div className="h-screen bg-gray-100 pt-20">
+        <h1 className="mb-10 text-center text-2xl font-bold">Cart Items</h1>
+        {cartItems.length === 0 ? (
+          <Message />
+        ) : (
+          <div className="mx-auto max-w-7xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
+            {cartItems.map((item: any) => (
+              <div className="rounded-lg md:w-2/3" key={item._id}>
+                <div className="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-full rounded-lg sm:w-40"
+                  />
+                  <div className="sm:ml-4 sm:flex sm:w-full sm:justify-between">
+                    <div className="mt-5 sm:mt-0">
+                      <h2 className="text-lg font-bold text-gray-900">
+                        <Link to={`/article/${item._id}`}>{item.name}</Link>
+                      </h2>
+                      <p className="mt-1 text-xs text-gray-700">{item.prix}</p>
                     </div>
-                    <div className="flex items-center space-x-4">
-                      <p className="text-sm">259.000 ₭</p>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        className="h-5 w-5 cursor-pointer duration-150 hover:text-red-500"
+                    <div className="mt-4 flex justify-between im sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
+                      <select
+                        id="quantity"
+                        value={item.qty}
+                        onChange={(e) => {}}
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M6 18L18 6M6 6l12 12"
-                        />
-                      </svg>
+                        {Array.from(Array(item.countInStock).keys()).map(
+                          (x) => (
+                            <option value={x + 1} key={x + 1}>
+                              {x + 1}
+                            </option>
+                          )
+                        )}
+                      </select>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            ))}
 
             <div className="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
               <div className="mb-2 flex justify-between">
@@ -91,8 +78,8 @@ const CartScreen = () => {
               </button>
             </div>
           </div>
-        </div>
-      </body>
+        )}
+      </div>
     </div>
   )
 }
