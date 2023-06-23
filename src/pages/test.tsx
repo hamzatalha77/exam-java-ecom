@@ -20,9 +20,12 @@ const CartScreen = () => {
           <Message />
         ) : (
           <div className="mx-auto max-w-7xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
-            {cartItems.map((item: any) => (
-              <div className="rounded-lg md:w-2/3" key={item._id}>
-                <div className="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
+            <div className="rounded-lg md:w-2/3">
+              {cartItems.map((item: any) => (
+                <div
+                  className="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start"
+                  key={item._id}
+                >
                   <img
                     src={item.image}
                     alt={item.name}
@@ -60,8 +63,8 @@ const CartScreen = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
 
             <div className="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
               <div className="mb-2 flex justify-between">
