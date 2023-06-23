@@ -8,6 +8,7 @@ import Addarticle from './pages/Addarticle'
 import Navbar from './pages/Navbar'
 import Home from './pages/Home'
 import ArticleScreen from './pages/ArticleScreen'
+import CartScreen from './pages/CartScreen'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/article/:id" element={<ArticleScreen />} />
+          <Route path="/cart" element={<CartScreen />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
