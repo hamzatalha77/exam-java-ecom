@@ -1,10 +1,15 @@
 import { useState } from 'react'
 import { articles } from '../data/database'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+import { addToCart } from '../slices/cartSlice'
+import { useDispatch } from 'react-redux'
 
 const ArticleScreen = () => {
-  const [qty, setQty] = useState(1)
   const { id: articleId } = useParams()
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+  const [qty, setQty] = useState(1)
+
   const parsedArticleId = articleId ? parseInt(articleId) : undefined
 
   const article = parsedArticleId
@@ -12,7 +17,7 @@ const ArticleScreen = () => {
     : undefined
 
   if (!article) {
-    return <div>Loading...</div> // Or any other loading indicator or error message
+    return <div>Loading...</div>
   }
   const stockOptions = []
   for (let i = 1; i <= article.countInStock; i++) {
@@ -21,6 +26,10 @@ const ArticleScreen = () => {
         {i}
       </option>
     )
+  }
+  const addToCartHandler = () => {
+    dispatch(addToCart({ ...article, qty }))
+    navigate('/cart')
   }
   return (
     <div className="flex flex-col justify-between lg:flex-row gap-16 lg:items-center">
@@ -60,6 +69,7 @@ const ArticleScreen = () => {
           <button
             className="bg-violet-800 text-white font-semibold py-3 px-16 rounded-xl h-full"
             disabled={article.countInStock === 0}
+            onClick={addToCartHandler}
           >
             Add to Cart
           </button>
