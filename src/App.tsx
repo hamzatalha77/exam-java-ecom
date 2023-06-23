@@ -13,8 +13,8 @@ import CartScreen from './pages/CartScreen'
 const App = () => {
   return (
     <>
-      <Navbar />
       <Router>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/article/:id" element={<ArticleScreen />} />

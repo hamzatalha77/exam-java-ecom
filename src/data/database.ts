@@ -1,11 +1,16 @@
-import WorkIm from '../assets/projects/workImg.jpeg'
-import RealEst from '../assets/projects/realestate.jpg'
+import product1 from '../assets/product/Product (1).jpg'
+import product2 from '../assets/product/Product (2).jpg'
+import product3 from '../assets/product/Product (3).jpg'
+import product4 from '../assets/product/Product (4).jpg'
+import product5 from '../assets/product/Product (5).jpg'
+import product6 from '../assets/product/Product (6).jpg'
+import product7 from '../assets/product/Product (7).jpg'
 
 export const articles = [
   {
     _id: 1,
     name: 'Product 1',
-    image: WorkIm,
+    image: product1,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorem impedit modi quidem molestias, reiciendis itaque ea esse debitis aperiam nisi? Magnam minus magni deleniti eius repellendus ea labore eligendi.',
     prix: 200,
@@ -14,7 +19,7 @@ export const articles = [
   {
     _id: 2,
     name: 'Product 2',
-    image: RealEst,
+    image: product2,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorem impedit modi quidem molestias, reiciendis itaque ea esse debitis aperiam nisi? Magnam minus magni deleniti eius repellendus ea labore eligendi.',
     prix: 300,
@@ -23,7 +28,7 @@ export const articles = [
   {
     _id: 3,
     name: 'Product 3',
-    image: WorkIm,
+    image: product3,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorem impedit modi quidem molestias, reiciendis itaque ea esse debitis aperiam nisi? Magnam minus magni deleniti eius repellendus ea labore eligendi.',
     prix: 400,
@@ -32,7 +37,7 @@ export const articles = [
   {
     _id: 4,
     name: 'Product 4',
-    image: RealEst,
+    image: product4,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorem impedit modi quidem molestias, reiciendis itaque ea esse debitis aperiam nisi? Magnam minus magni deleniti eius repellendus ea labore eligendi.',
     prix: 5000,
@@ -41,7 +46,7 @@ export const articles = [
   {
     _id: 5,
     name: 'Product 5',
-    image: RealEst,
+    image: product5,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorem impedit modi quidem molestias, reiciendis itaque ea esse debitis aperiam nisi? Magnam minus magni deleniti eius repellendus ea labore eligendi.',
     prix: 100,
@@ -50,7 +55,7 @@ export const articles = [
   {
     _id: 6,
     name: 'Product 6',
-    image: RealEst,
+    image: product6,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorem impedit modi quidem molestias, reiciendis itaque ea esse debitis aperiam nisi? Magnam minus magni deleniti eius repellendus ea labore eligendi.',
     prix: 900,
@@ -59,7 +64,7 @@ export const articles = [
   {
     _id: 7,
     name: 'Product 12',
-    image: RealEst,
+    image: product7,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorem impedit modi quidem molestias, reiciendis itaque ea esse debitis aperiam nisi? Magnam minus magni deleniti eius repellendus ea labore eligendi.',
     prix: 6000,

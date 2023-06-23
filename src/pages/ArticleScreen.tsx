@@ -33,11 +33,11 @@ const ArticleScreen = () => {
   }
   return (
     <div className="flex flex-col justify-between lg:flex-row gap-16 lg:items-center">
-      <div className="flex flex-col gap-6 lg:w-2/4">
+      <div className="flex flex-col gap-6 lg:w-2/4 pt-40 ml-12">
         <img
           src={article.image}
           alt="something"
-          className="w-full h-full aspect-square object-cover rounded-xl"
+          className="h-auto max-w-lg aspect-square object-cover rounded-xl"
         />
       </div>
 
