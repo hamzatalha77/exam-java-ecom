@@ -4,7 +4,7 @@ import { FaTrash } from 'react-icons/fa'
 import Message from '../components/Message'
 import '../App.css'
 import { RootState } from '../store'
-import { addToCart } from '../slices/cartSlice'
+import { addToCart, removeFromCart } from '../slices/cartSlice'
 
 const CartScreen = () => {
   const navigate = useNavigate()
@@ -15,10 +15,15 @@ const CartScreen = () => {
   const addToCartHandler = async (article: any, qty: number) => {
     dispatch(addToCart({ ...article, qty }))
   }
+  const removeFromCartHandler = async (id: any) => {
+    dispatch(removeFromCart(id))
+  }
   return (
     <div>
       <div className="h-full bg-gray-100 pt-20">
-        <h1 className="mb-10 text-center text-2xl font-bold">Cart Items</h1>
+        <h1 className="text-3xl font-semibold text-center text-purple-700 underline">
+          Cart Items
+        </h1>
         {cartItems.length === 0 ? (
           <Message />
         ) : (
@@ -63,7 +68,7 @@ const CartScreen = () => {
                     </div>
                   </div>
                   <div style={{ position: 'relative', bottom: '-106px' }}>
-                    <button>
+                    <button onClick={() => removeFromCartHandler(item._id)}>
                       <FaTrash />
                     </button>
                   </div>
