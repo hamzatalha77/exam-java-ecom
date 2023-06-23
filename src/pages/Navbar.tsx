@@ -1,7 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
 import { FaShoppingCart } from 'react-icons/fa'
+import { useSelector } from 'react-redux'
+import { RootState } from '../store'
+import { Badge } from 'react-bootstrap'
 const Navbar = () => {
+  const { cartItems } = useSelector((state: RootState) => state.cart)
+  console.log(cartItems)
   return (
     <>
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
@@ -68,6 +72,12 @@ const Navbar = () => {
                   className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   <FaShoppingCart />
+                  Cart
+                  {cartItems.length > 0 && (
+                    <Badge pill bg="success" style={{ marginLeft: '5px' }}>
+                      {cartItems.reduce((a: number, c: any) => a + c.qty, 0)}
+                    </Badge>
+                  )}
                 </a>
               </li>
               <li>
