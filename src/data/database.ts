@@ -9,7 +9,7 @@ import product7 from '../assets/product/Product (7).jpg'
 export const articles = [
   {
     _id: 1,
-    name: 'Product 1',
+    name: 'the nike free rn is a red and white shoe',
     image: product1,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorem impedit modi quidem molestias, reiciendis itaque ea esse debitis aperiam nisi? Magnam minus magni deleniti eius repellendus ea labore eligendi.',
@@ -18,7 +18,7 @@ export const articles = [
   },
   {
     _id: 2,
-    name: 'Product 2',
+    name: 'adidas superstar superstar white black',
     image: product2,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorem impedit modi quidem molestias, reiciendis itaque ea esse debitis aperiam nisi? Magnam minus magni deleniti eius repellendus ea labore eligendi.',
@@ -36,7 +36,7 @@ export const articles = [
   },
   {
     _id: 4,
-    name: 'Product 4',
+    name: 'a red shoe with a white label on it',
     image: product4,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorem impedit modi quidem molestias, reiciendis itaque ea esse debitis aperiam nisi? Magnam minus magni deleniti eius repellendus ea labore eligendi.',
@@ -45,7 +45,7 @@ export const articles = [
   },
   {
     _id: 5,
-    name: 'Product 5',
+    name: 'adidas originals originals white / blue',
     image: product5,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorem impedit modi quidem molestias, reiciendis itaque ea esse debitis aperiam nisi? Magnam minus magni deleniti eius repellendus ea labore eligendi.',
@@ -54,7 +54,7 @@ export const articles = [
   },
   {
     _id: 6,
-    name: 'Product 6',
+    name: 'nike zoom zoom low vol green glow',
     image: product6,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorem impedit modi quidem molestias, reiciendis itaque ea esse debitis aperiam nisi? Magnam minus magni deleniti eius repellendus ea labore eligendi.',
@@ -63,7 +63,7 @@ export const articles = [
   },
   {
     _id: 7,
-    name: 'Product 12',
+    name: 'a pair of white sneakers with red and blue stripes',
     image: product7,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorem impedit modi quidem molestias, reiciendis itaque ea esse debitis aperiam nisi? Magnam minus magni deleniti eius repellendus ea labore eligendi.',
