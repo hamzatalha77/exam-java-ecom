@@ -27,7 +27,7 @@ export const articles = [
   },
   {
     _id: 3,
-    name: 'Product 3',
+    name: 'a pair of red and blue sneakers on a concrete floor',
     image: product3,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit dolorem impedit modi quidem molestias, reiciendis itaque ea esse debitis aperiam nisi? Magnam minus magni deleniti eius repellendus ea labore eligendi.',

@@ -1,8 +1,18 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
+import React, { useState } from 'react'
+
 import { Link } from 'react-router-dom'
-import { articles } from '../data/database'
+import { articles as articleData } from '../data/database'
+
 const Dashboard = () => {
+  const [articles, setArticles] = useState(articleData)
+
+  const deleteHandler = (id: any) => {
+    if (window.confirm('Are you sure?')) {
+      const newArticles = articles.filter((article) => article._id !== id)
+      setArticles(newArticles)
+    }
+  }
   return (
     <div className="container mx-auto mt-20 px-60">
       <h1 className="text-3xl font-semibold text-center text-purple-700 underline">
@@ -89,9 +99,12 @@ const Dashboard = () => {
                         </a>
                       </td>
                       <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
-                        <a className="text-red-500 hover:text-red-700" href="#">
+                        <button
+                          className="text-red-500 hover:text-red-700"
+                          onClick={() => deleteHandler(article._id)}
+                        >
                           Supprimer
-                        </a>
+                        </button>
                       </td>
                     </tr>
                   ))}
