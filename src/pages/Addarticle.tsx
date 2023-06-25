@@ -1,6 +1,17 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-const Addarticle = () => {
+
+import { articles } from '../data/database'
+import { Link, useParams } from 'react-router-dom'
+const Addarticle = (match: any) => {
+  const { id: articleId } = useParams()
+  const parsedArticleId = articleId ? parseInt(articleId) : undefined
+
+  const article = parsedArticleId
+    ? articles.find((a) => a._id === parsedArticleId)
+    : undefined
+
+  if (!article) {
+    return <div>Loading...</div>
+  }
   return (
     <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
       <div className="w-full p-6 m-auto bg-white rounded-md shadow-md lg:max-w-xl">
@@ -20,6 +31,7 @@ const Addarticle = () => {
             </label>
             <input
               type="text"
+              value={article.name}
               className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
             />
           </div>
@@ -29,6 +41,7 @@ const Addarticle = () => {
             </label>
             <input
               type="text"
+              value={article.description}
               className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
             />
           </div>
@@ -38,10 +51,21 @@ const Addarticle = () => {
             </label>
             <input
               type="number"
+              value={article.prix}
               className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
             />
           </div>
+          <div className="mb-2">
+            <label className="block text-sm font-semibold text-gray-800">
+              Le Prix
+            </label>
 
+            <img
+              className="h-auto max-w-xs rounded-lg shadow-xl dark:shadow-gray-800"
+              src={article.image}
+              alt="description"
+            />
+          </div>
           <div className="flex items-center justify-center w-full">
             <label className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
               <div className="flex flex-col items-center justify-center pt-5 pb-6">

@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react'
 
 import { Link } from 'react-router-dom'
@@ -91,12 +90,12 @@ const Dashboard = () => {
                         {article.prix}
                       </td>
                       <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
-                        <a
+                        <Link
+                          to={`/article/${article._id}/edit`}
                           className="text-green-500 hover:text-green-700"
-                          href="#"
                         >
                           Modifier
-                        </a>
+                        </Link>
                       </td>
                       <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
                         <button
