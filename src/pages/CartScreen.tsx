@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { FaTrash } from 'react-icons/fa'
 import Message from '../components/Message'
 import '../App.css'
-import { RootState } from '../store'
-import { addToCart, removeFromCart } from '../slices/cartSlice'
+import { RootState } from '../redux/store'
+import { addToCart, removeFromCart } from '../redux/cartSlice'
 
 const CartScreen = () => {
   const navigate = useNavigate()

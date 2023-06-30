@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { articles } from '../data/database'
 import { useNavigate, useParams } from 'react-router-dom'
-import { addToCart } from '../slices/cartSlice'
+import { addToCart } from '../redux/cartSlice'
 import { useDispatch } from 'react-redux'
 
 const ArticleScreen = () => {
